@@ -1,12 +1,35 @@
-# React + Vite
+## Useful Scripts to run the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- `npm install` - to install to the dependencies
+- `npm run dev` - Starts the development server.
+  This will serve the production build at [http://localhost:4173](http://localhost:4173).
 
-Currently, two official plugins are available:
+- `npm run build` - Builds the project for production.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tasks Completed
 
-## Expanding the ESLint configuration
+### UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Category Selection Page**: Users should be able to select a quiz category. Categories can be hardcoded into the frontend (e.g., "JavaScript Basics", "React Basics").
+- **Quiz Page**:
+
+  - After the user selects a category, the relevant questions should be loaded. -done
+  - Display one question at a time with four multiple-choice options. - done
+  - Implement a **10-second countdown timer** for each question. If the user doesn’t answer within the time limit, automatically move to the next question. - done
+  - Users should be able to manually navigate to the next question before the timer expires using a "Next" button. - done
+
+- **Score Calculation**:
+  - After the last question is answered, calculate the final score. - done
+  - Display the score and performance feedback (e.g., "Great job!" for a high score or "Keep practicing!" for a low score). - done
+  - Provide the number of correct answers out of the total questions. - done
+
+### Timer and Score Calculation
+
+- **Timer Implementation**: Each question should have a **10-second timer**. If time runs out, automatically move to the next question. - done
+- **Score Calculation**: The score should be based on correct answers. Display the score at the end of the quiz, showing:
+  - Number of correct answers. - done
+  - Number of unanswered questions. - done
+
+### Nice to Have
+
+- **Highlighting Correct/Incorrect Answers**: When a user selects an answer, it should be highlighted based on correctness (e.g., green for correct, red for incorrect), but no feedback should be shown after each question. - not done
